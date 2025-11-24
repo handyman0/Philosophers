@@ -21,6 +21,13 @@
 # include <sys/time.h>
 # include <stdbool.h>
 
+# ifndef DEBUG_FORMATTING
+#  define DEBUG_FORMATTING 0
+# endif
+
+# define MAX_PHILOS 200
+# define STR_MAX_PHILOS "200"
+
 # define NC		"\e[0m"
 # define RED	"\e[31m"
 # define GREEN	"\e[32m"
@@ -34,7 +41,7 @@
 # define STR_ERR_INPUT_DIGIT "%s invalid input: %s: \
 not a valid unsigned integer between 0 and 2147483647.\n"
 # define STR_ERR_INPUT_POFLOW "%s invalid input: \
-three must be between 1 and %s philosophers.\n"
+number_of_philosophers must be between 1 and %s philosophers.\n"
 # define STR_ERR_THREAD "%s error: could not create thread.\n"
 # define STR_ERR_MALLOC "%s error: could not allocate memory.\n"
 # define STR_ERR_MUTEX "%s error: could not create mutex.\n"

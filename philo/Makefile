@@ -43,4 +43,20 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all re clean fclean
+pretty:
+	$(MAKE) MODE=pretty
+
+debug:
+	$(MAKE) MODE=debug
+
+help:
+	@printf "\nUsage:\n"
+	@printf "  make           -> build default mode (no debug formatting)\n"
+	@printf "  make pretty    -> build with debug-friendly colored output\n"
+	@printf "  make debug     -> build with thread sanitizer support and debug flags\n"
+	@printf "  make clean     -> remove objects\n"
+	@printf "  make fclean    -> remove objects and binary\n\n"
+	@printf "Example of build and run:\n"
+	@printf "  make pretty && ./philo 5 800 200 200 3\n\n"
+
+.PHONY: all re clean fclean pretty debug help

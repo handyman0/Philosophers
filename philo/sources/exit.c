@@ -6,7 +6,7 @@
 /*   By: lmelo-do <lmelo-do@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 08:36:28 by lmelo-do          #+#    #+#             */
-/*   Updated: 2025/11/10 08:50:45 by lmelo-do         ###   ########.fr       */
+/*   Updated: 2025/11/24 17:32:03 by lmelo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*free_table(t_table *table)
 {
 	unsigned int	i;
-	
+
 	if (!table)
 		return (NULL);
 	if (table->fork_locks != NULL)
@@ -29,7 +29,7 @@ void	*free_table(t_table *table)
 				free(table->philos[i]);
 			i++;
 		}
-		free(table->philos);	
+		free(table->philos);
 	}
 	free(table);
 	return (NULL);
@@ -38,7 +38,7 @@ void	*free_table(t_table *table)
 void	destroy_mutexes(t_table *table)
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	while (i < table->nb_philos)
 	{
