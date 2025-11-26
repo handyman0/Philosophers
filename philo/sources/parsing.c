@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmelo-do <lmelo-do@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmelo-do <lmelo-do@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 18:25:45 by lmelo-do          #+#    #+#             */
-/*   Updated: 2025/11/24 18:36:46 by lmelo-do         ###   ########.fr       */
+/*   Updated: 2025/11/26 04:09:02 by lmelo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static bool contains_only_digits(char *str)
+static bool	contains_only_digits(char *str)
 {
 	int	i;
 

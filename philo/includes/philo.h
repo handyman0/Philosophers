@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmelo-do <lmelo-do@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmelo-do <lmelo-do@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 07:19:53 by lmelo-do          #+#    #+#             */
-/*   Updated: 2025/11/10 07:57:57 by lmelo-do         ###   ########.fr       */
+/*   Updated: 2025/11/26 04:05:46 by lmelo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ number_of_philosophers must be between 1 and %s philosophers.\n"
 # define STR_ERR_MUTEX "%s error: could not create mutex.\n"
 
 typedef struct s_philo	t_philo;
-
-typedef struct	s_table
+typedef struct s_table
 {
 	time_t			start_time;
 	unsigned int	nb_philos;
@@ -64,7 +63,7 @@ typedef struct	s_table
 	t_philo			**philos;
 }	t_table;
 
-typedef struct	s_philo
+typedef struct s_philo
 {
 	pthread_t		thread;
 	unsigned int	id;
@@ -75,7 +74,7 @@ typedef struct	s_philo
 	t_table			*table;
 }	t_philo;
 
-typedef enum	e_status
+typedef enum e_status
 {
 	DIED = 0,
 	EATING = 1,

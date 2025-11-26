@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   output.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmelo-do <lmelo-do@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmelo-do <lmelo-do@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:54:47 by lmelo-do          #+#    #+#             */
-/*   Updated: 2025/11/24 18:24:59 by lmelo-do         ###   ########.fr       */
+/*   Updated: 2025/11/26 04:08:38 by lmelo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static void	print_status_debug(t_philo *philo, char *color, char *str, t_status status)
+static void	print_status_debug(t_philo *philo, char *color, char *str,
+			t_status status)
 {
 	if (status == GOT_FORK_1)
 		printf("[%10ld]\t%s%03d\t%s\e[0m: fork [%d]\n",

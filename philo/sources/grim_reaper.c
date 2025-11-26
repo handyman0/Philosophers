@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   grim_reaper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmelo-do <lmelo-do@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmelo-do <lmelo-do@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 08:52:57 by lmelo-do          #+#    #+#             */
-/*   Updated: 2025/11/10 09:29:48 by lmelo-do         ###   ########.fr       */
+/*   Updated: 2025/11/26 04:06:13 by lmelo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ bool	has_simulation_stopped(t_table *table)
 	return (r);
 }
 
-static bool kill_philo(t_philo *philo)
+static bool	kill_philo(t_philo *philo)
 {
 	time_t	time;
 

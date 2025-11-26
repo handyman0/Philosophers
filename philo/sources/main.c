@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmelo-do <lmelo-do@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lmelo-do <lmelo-do@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 07:18:39 by lmelo-do          #+#    #+#             */
-/*   Updated: 2025/11/24 19:24:06 by lmelo-do         ###   ########.fr       */
+/*   Updated: 2025/11/26 04:07:42 by lmelo-do         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-static bool start_simulation(t_table *table)
+static bool	start_simulation(t_table *table)
 {
 	unsigned int	i;
 
@@ -40,7 +40,7 @@ static bool start_simulation(t_table *table)
 	return (true);
 }
 
-static void stop_simulation(t_table *table)
+static void	stop_simulation(t_table *table)
 {
 	unsigned int	i;
 
@@ -58,9 +58,9 @@ static void stop_simulation(t_table *table)
 	free_table(table);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_table *table;
+	t_table	*table;
 
 	table = NULL;
 	if (argc - 1 < 4 || argc - 1 > 5)
