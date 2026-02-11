@@ -53,23 +53,12 @@ static t_philo	**init_philosophers(t_table *table)
 	while (i < table->nb_philos)
 	{
 		philos[i] = malloc(sizeof(t_philo));
-		if (!philos[i])
+		if (!philos[i] || pthread_mutex_init(&philos[i]->meal_time_lock, NULL))
 		{
-			while (i-- > 0)
-				free(philos[i]);
+			while (i > 0)
+				free(philos[--i]);
 			free(philos);
 			return (error_null(STR_ERR_MALLOC, NULL, table));
-		}
-		if (pthread_mutex_init(&philos[i]->meal_time_lock, NULL) != 0)
-		{
-			free(philos[i]);
-			while (i-- > 0)
-			{
-				pthread_mutex_destroy(&philos[i]->meal_time_lock);
-				free(philos[i]);
-			}
-			free(philos);
-			return (error_null(STR_ERR_MUTEX, NULL, table));
 		}
 		philos[i]->table = table;
 		philos[i]->id = i;

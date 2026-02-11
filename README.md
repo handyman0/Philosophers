@@ -75,16 +75,4 @@ This simulates 5 philosophers with a death timer of 800ms, eating time of 200ms,
 - [The Dining Philosophers Problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem)
 - [gettimeofday documentation](https://man7.org/linux/man-pages/man2/gettimeofday.2.html)
 
-### AI Usage
-
-AI tools were used to assist with:
-- Code structure organization and best practices
-- Understanding edge cases in thread synchronization
-- Testing strategies and validation approaches
-- Documentation and clarity of technical writing
-
-No AI-generated code was directly copied into the project. All implementation was performed manually based on research and understanding of threading concepts.
-
----
-
 **Author:** lmelo-do
